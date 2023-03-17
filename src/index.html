@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('parts/head.html', {
+  'title': 'Start Page'
+})
+<body>
+<div class="page">
+    @@include('parts/header.html', {})
+    <main class="main">
+      <div class="main__logo mb-10">
+        <img class="main__logo--logo" src="./assets/img/logo.svg" alt="logo">
+      </div>
+      <div class="main__start-message--title mb-10">
+        HTML/SCSS Gulp Starter
+      </div>
+      <div class="main__start-message--subtitle mb-20">
+        Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Заглавных его пустился собрал встретил эта большой, то, себя предупреждал рыбными текста от всех ручеек своего буквоград возвращайся приставка алфавит.
+      </div>
+      <div class="main__socials">
+        <div class="socials">
+          <a href="https://github.com/erofteev" target="_blank"><img src="./assets/img/svgicons/gh.svg" alt="Github"></a>
+          <a href="tg://resolve?domain=erofteev" target="_blank"><img src="./assets/img/svgicons/tg.svg" alt="Telegram"></a>
+        </div>
+      </div>
+    </main>
+    @@include('parts/footer.html', {})
+</div>
+</body>
+</html>

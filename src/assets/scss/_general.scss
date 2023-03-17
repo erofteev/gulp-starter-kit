@@ -1,0 +1,42 @@
+// GENERAL CSS SETTINGS
+*, *::before, *::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+::placeholder {
+  color: #666;
+}
+
+::selection{
+  background-color: $accent;
+  color: #fff;
+}
+
+input, textarea {
+  outline: none;
+  &:focus:required:invalid {
+    border-color: red;
+    &:required:valid {
+      border-color: green;
+    }
+  }
+}
+
+body {
+  font-family: $userfont;
+  font-size: $fontsize;
+  line-height: $lineheight;
+  color: $textcolor;
+  position: relative;
+  overflow-x: hidden;
+  background-color: $bgcolor;
+}
+
+.mb-10 {
+  margin-bottom: .625rem;
+}
+.mb-20 {
+  margin-bottom: 1.25rem;
+}
