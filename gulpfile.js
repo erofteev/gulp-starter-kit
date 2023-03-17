@@ -169,7 +169,24 @@ const js = () => {
         mode: ifMode.isBuild ? 'production' : 'development',
         output: {
           filename: 'main.min.js',
-        }
+        },
+        module: {
+          rules: [{
+            test: /\.m?js$/,
+            exclude: /node_modules/,
+            use: {
+              loader: 'babel-loader',
+              options: {
+                presets: [
+                  ['@babel/preset-env', {
+                    targets: "defaults"
+                  }]
+                ]
+              }
+            }
+          }]
+        },
+        devtool: false
       }))
     .pipe(gulp.dest(path.build.js))
     .pipe(browsersync.stream())
